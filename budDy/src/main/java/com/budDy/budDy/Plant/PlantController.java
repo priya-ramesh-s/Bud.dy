@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "bud-dy/plants")
+@RequestMapping(path = "buddy/plants")
 public class PlantController {
 
     private PlantService plantService;

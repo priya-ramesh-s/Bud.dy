@@ -1,9 +1,11 @@
 package com.budDy.budDy.User;
 
 import com.budDy.budDy.Plant.Plant;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserService {
     private UserDataAccessService userDataAccessService;
 
