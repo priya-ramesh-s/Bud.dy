@@ -20,7 +20,7 @@ public class PlantController {
     }
 
     @PostMapping
-    public void addPlant(@RequestBody Plant plant){
+    public void addPlant(@RequestBody Plant plant) {
         System.out.println(plant);
         plantService.addNewPlant(plant);
     }
@@ -32,6 +32,7 @@ public class PlantController {
     }
 
     @PutMapping
-    public void updatePlant (@PathVariable ("plantName") String plantName, @RequestBody Plant plant){
+    public void updatePlant(@PathVariable("plantName") String plantName, @RequestBody Plant plant) {
         plantService.updatePlant(plantName, plant);
     }
+}
