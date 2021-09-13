@@ -1,17 +1,36 @@
 package com.budDy.budDy.Plant;
 
+import javax.persistence.*;
 import java.util.Objects;
 
-public class Plant {
-    private String name;
-    private String latinName;
-    private String plantType;
-    private String water;
-    private String light;
-    private String experience;
-    private int rating;
 
-    public Plant(String name, String latinName, String plantType, String water, String light, String experience, int rating) {
+@Entity
+@Table
+public class Plant {
+
+    @Id
+    @SequenceGenerator(
+            name = "plant_sequence",
+            sequenceName = "plant_sequence",
+            allocationSize = 1
+    )
+
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "plant_sequence"
+    )
+
+    Long id;
+    String name;
+    String latinName;
+    PlantType plantType;
+    String water;
+    String light;
+    PlantExperience experience;
+    int rating;
+
+    public Plant(Long id, String name, String latinName, PlantType plantType, String water, String light, PlantExperience experience, int rating) {
+        this.id = id;
         this.name = name;
         this.latinName = latinName;
         this.plantType = plantType;
@@ -19,6 +38,24 @@ public class Plant {
         this.light = light;
         this.experience = experience;
         this.rating = rating;
+    }
+
+    public Plant(String name, String latinName, PlantType plantType, String water, String light, PlantExperience experience, int rating) {
+        this.name = name;
+        this.latinName = latinName;
+        this.plantType = plantType;
+        this.water = water;
+        this.light = light;
+        this.experience = experience;
+        this.rating = rating;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -37,11 +74,11 @@ public class Plant {
         this.latinName = latinName;
     }
 
-    public String getPlantType() {
+    public PlantType getPlantType() {
         return plantType;
     }
 
-    public void setPlantType(String plantType) {
+    public void setPlantType(PlantType plantType) {
         this.plantType = plantType;
     }
 
@@ -61,11 +98,11 @@ public class Plant {
         this.light = light;
     }
 
-    public String getExperience() {
+    public PlantExperience getExperience() {
         return experience;
     }
 
-    public void setExperience(String experience) {
+    public void setExperience(PlantExperience experience) {
         this.experience = experience;
     }
 
@@ -82,25 +119,25 @@ public class Plant {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Plant plant = (Plant) o;
-        return rating == plant.rating && Objects.equals(name, plant.name) && Objects.equals(latinName, plant.latinName) && Objects.equals(plantType, plant.plantType) && Objects.equals(water, plant.water) && Objects.equals(light, plant.light) && Objects.equals(experience, plant.experience);
+        return rating == plant.rating && Objects.equals(id, plant.id) && Objects.equals(name, plant.name) && Objects.equals(latinName, plant.latinName) && plantType == plant.plantType && Objects.equals(water, plant.water) && Objects.equals(light, plant.light) && experience == plant.experience;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, latinName, plantType, water, light, experience, rating);
+        return Objects.hash(id, name, latinName, plantType, water, light, experience, rating);
     }
 
     @Override
     public String toString() {
         return "Plant{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", latinName='" + latinName + '\'' +
-                ", plantType='" + plantType + '\'' +
+                ", plantType=" + plantType +
                 ", water='" + water + '\'' +
                 ", light='" + light + '\'' +
-                ", experience='" + experience + '\'' +
+                ", experience=" + experience +
                 ", rating=" + rating +
                 '}';
     }
-
 }

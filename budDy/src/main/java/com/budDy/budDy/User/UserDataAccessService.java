@@ -11,7 +11,7 @@ public class UserDataAccessService {
 
     public UserDataAccessService(){
         User user1 = new User("lizzieDearden", "lizzied@live.com", "123", UserExperience.BEGINNER, 2);
-        User user2 = new User("stephRost", "stephR@google.com", "abc", UserExperience.ADVANCED, 1);
+        User user2 = new User("stephRost", "stephR@google.com", "abc", UserExperience.ADVANCED , 1);
 
     userDB = new ArrayList<>();
         userDB.add(user1);

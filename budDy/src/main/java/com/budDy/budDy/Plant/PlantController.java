@@ -1,15 +1,17 @@
 package com.budDy.budDy.Plant;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "buddy/plants")
+@RequestMapping(path = "api/buddy/plants")
 public class PlantController {
 
     private PlantService plantService;
 
+    @Autowired
     public PlantController(PlantService plantService) {
         this.plantService = plantService;
     }
