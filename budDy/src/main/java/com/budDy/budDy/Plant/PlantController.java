@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/buddy/plants")
+@RequestMapping(path = "buddy/plants")
 public class PlantController {
 
     private PlantService plantService;
@@ -16,25 +16,36 @@ public class PlantController {
         this.plantService = plantService;
     }
 
+
     @GetMapping
-    public List<Plant> listPlants() {
+    public List<Plant> getPlants() {
         return plantService.getPlants();
     }
 
+    //Adding new plants //create a method in Service class from .addPlant
     @PostMapping
     public void addPlant(@RequestBody Plant plant) {
-        System.out.println(plant);
-        plantService.addNewPlant(plant);
+        plantService.addPlant(plant);
     }
 
-    // localhost:8080/bud-dy/plants/Spearmint
-    @DeleteMapping("{plantName}")
-    public void deletePlant(@PathVariable("plantName") String plantName) {
-        plantService.deletePlant(plantName);
+    @DeleteMapping (path = "{plantId}")
+    public void deletePlant(@PathVariable("plantId") Long plantId){
+        plantService.deletePlant(plantId);
     }
 
-    @PutMapping
-    public void updatePlant(@PathVariable("plantName") String plantName, @RequestBody Plant plant) {
-        plantService.updatePlant(plantName, plant);
-    }
+//    @PutMapping
+//    public void updatePlant(@PathVariable("plantName") String plantName){
+//        plantService.updatePlant(plantName);
+//    }
+
+//     localhost:8080/bud-dy/plants/Spearmint
+//    @DeleteMapping("{plantName}")
+//    public void deletePlant(@PathVariable("plantName") String plantName) {
+//        plantService.deletePlant(plantName);
+//    }
+//
+//    @PutMapping
+//    public void updatePlant(@PathVariable("plantName") String plantName, @RequestBody Plant plant) {
+//        plantService.updatePlant(plantName, plant);
+//    }
 }
