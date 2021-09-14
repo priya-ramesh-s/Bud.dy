@@ -7,7 +7,6 @@ import java.util.Objects;
 @Entity
 @Table
 public class Plant {
-
     @Id
     @SequenceGenerator(
             name = "plant_sequence",
@@ -28,6 +27,9 @@ public class Plant {
     String light;
     PlantExperience experience;
     int rating;
+
+    public Plant(){
+    }
 
     public Plant(Long id, String name, String latinName, PlantType plantType, String water, String light, PlantExperience experience, int rating) {
         this.id = id;

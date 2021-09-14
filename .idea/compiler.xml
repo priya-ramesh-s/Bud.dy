@@ -10,12 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="budDy" target="16" />
+      <module name="budDy" target="1.5" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="budDy" options="-parameters" />
-    </option>
   </component>
 </project>

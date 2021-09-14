@@ -9,7 +9,6 @@ public class BudDyApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BudDyApplication.class, args);
-		//QuizQuestions.intro();
+		QuizQuestions.intro();
 	}
-
 }
