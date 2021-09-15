@@ -43,6 +43,8 @@ public class PlantService {
     }
 
 
+    public void updatePlant(Long plantId, Plant plant) {
+    }
 }
 
 

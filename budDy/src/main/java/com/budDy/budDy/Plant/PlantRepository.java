@@ -18,6 +18,6 @@ public interface PlantRepository
 //    @Query("select p from Plant p where p.name = ?1")
     Optional<Plant> getPlantByName(String name);
 
-
+//write methods to sort and return list WHERE ....
 
 }

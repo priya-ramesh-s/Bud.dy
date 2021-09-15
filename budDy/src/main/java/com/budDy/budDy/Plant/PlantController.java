@@ -33,6 +33,11 @@ public class PlantController {
         plantService.deletePlant(plantId);
     }
 
+    @PutMapping
+    public void updatePlant(@PathVariable("plantId") Long plantId, @RequestBody Plant plant){
+        plantService.updatePlant (plantId, plant);
+    }
+
 //    @PutMapping
 //    public void updatePlant(@PathVariable("plantName") String plantName){
 //        plantService.updatePlant(plantName);
