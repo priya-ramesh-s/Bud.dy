@@ -22,33 +22,33 @@ public class Plant {
     Long id;
     String name;
     String latinName;
-    PlantType plantType;
+    String plantType;
     String water;
     String light;
-    PlantExperience experience;
+    String plantExperience;
     int rating;
 
     public Plant(){
     }
 
-    public Plant(Long id, String name, String latinName, PlantType plantType, String water, String light, PlantExperience experience, int rating) {
+    public Plant(Long id, String name, String latinName, String plantType, String water, String light, String plantExperience, int rating) {
         this.id = id;
         this.name = name;
         this.latinName = latinName;
         this.plantType = plantType;
         this.water = water;
         this.light = light;
-        this.experience = experience;
+        this.plantExperience = plantExperience;
         this.rating = rating;
     }
 
-    public Plant(String name, String latinName, PlantType plantType, String water, String light, PlantExperience experience, int rating) {
+    public Plant(String name, String latinName, String plantType, String water, String light, String plantExperience, int rating) {
         this.name = name;
         this.latinName = latinName;
         this.plantType = plantType;
         this.water = water;
         this.light = light;
-        this.experience = experience;
+        this.plantExperience = plantExperience;
         this.rating = rating;
     }
 
@@ -76,11 +76,11 @@ public class Plant {
         this.latinName = latinName;
     }
 
-    public PlantType getPlantType() {
+    public String getPlantType() {
         return plantType;
     }
 
-    public void setPlantType(PlantType plantType) {
+    public void setPlantType(String plantType) {
         this.plantType = plantType;
     }
 
@@ -100,12 +100,12 @@ public class Plant {
         this.light = light;
     }
 
-    public PlantExperience getExperience() {
-        return experience;
+    public String getPlantExperience() {
+        return plantExperience;
     }
 
-    public void setExperience(PlantExperience experience) {
-        this.experience = experience;
+    public void setPlantExperience(String plantExperience) {
+        this.plantExperience = plantExperience;
     }
 
     public int getRating() {
@@ -121,12 +121,12 @@ public class Plant {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Plant plant = (Plant) o;
-        return rating == plant.rating && Objects.equals(id, plant.id) && Objects.equals(name, plant.name) && Objects.equals(latinName, plant.latinName) && plantType == plant.plantType && Objects.equals(water, plant.water) && Objects.equals(light, plant.light) && experience == plant.experience;
+        return rating == plant.rating && Objects.equals(id, plant.id) && Objects.equals(name, plant.name) && Objects.equals(latinName, plant.latinName) && Objects.equals(plantType, plant.plantType) && Objects.equals(water, plant.water) && Objects.equals(light, plant.light) && Objects.equals(plantExperience, plant.plantExperience);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, latinName, plantType, water, light, experience, rating);
+        return Objects.hash(id, name, latinName, plantType, water, light, plantExperience, rating);
     }
 
     @Override
@@ -135,10 +135,10 @@ public class Plant {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", latinName='" + latinName + '\'' +
-                ", plantType=" + plantType +
+                ", plantType='" + plantType + '\'' +
                 ", water='" + water + '\'' +
                 ", light='" + light + '\'' +
-                ", experience=" + experience +
+                ", plantExperience='" + plantExperience + '\'' +
                 ", rating=" + rating +
                 '}';
     }

@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface QuizResultRepository
-    extends JpaRepository<QuizResult, Long> {
+public interface QuizRepository
+    extends JpaRepository<Quiz, Long> {
 
-        Optional<QuizResult> getQuizResultById(Long id);
+        Optional<Quiz> getQuizById(Long id);
 }
 

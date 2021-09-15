@@ -22,14 +22,13 @@ class User {
     String username;
     String email;
     String password;
-    UserExperience userExperience;
+    String userExperience;
     int quizResultID; //foreign key
 
     public User(){
     }
 
-    public User(Long id, String username, String email, String password, UserExperience userExperience,
-                 int quizResultID) {
+    public User(Long id, String username, String email, String password, String userExperience, int quizResultID) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -38,7 +37,7 @@ class User {
         this.quizResultID = quizResultID;
     }
 
-    public User(String username, String email, String password, UserExperience userExperience, int quizResultID) {
+    public User(String username, String email, String password, String userExperience, int quizResultID) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -78,11 +77,11 @@ class User {
         this.password = password;
     }
 
-    public UserExperience getUserExperience() {
+    public String getUserExperience() {
         return userExperience;
     }
 
-    public void setUserExperience(UserExperience userExperience) {
+    public void setUserExperience(String userExperience) {
         this.userExperience = userExperience;
     }
 
@@ -95,27 +94,27 @@ class User {
     }
 
     @Override
-    public String toString() {
-        return "PlantUser{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", userExperience=" + userExperience +
-                ", quizResultID=" + quizResultID +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return quizResultID == user.quizResultID && Objects.equals(id, user.id) && Objects.equals(username, user.username) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && userExperience == user.userExperience;
+        return quizResultID == user.quizResultID && Objects.equals(id, user.id) && Objects.equals(username, user.username) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && Objects.equals(userExperience, user.userExperience);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, username, email, password, userExperience, quizResultID);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", userExperience='" + userExperience + '\'' +
+                ", quizResultID=" + quizResultID +
+                '}';
     }
 }

@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a4b91c58-18d7-480e-b448-8354f34e3c95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/UserConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/UserConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

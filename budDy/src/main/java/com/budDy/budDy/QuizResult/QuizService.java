@@ -8,33 +8,33 @@ import java.util.Optional;
 
 @Service
 public class QuizService {
-    private QuizResultRepository quizResultRepository;
+    private QuizRepository quizRepository;
 
     @Autowired
-    public QuizService(QuizResultRepository quizResultRepository) {
-        this.quizResultRepository = quizResultRepository;
+    public QuizService(QuizRepository quizRepository) {
+        this.quizRepository = quizRepository;
     }
 
-    public List<QuizResult> getQuizResults(){
-        return quizResultRepository.findAll();
+    public List<Quiz> getQuizResults(){
+        return quizRepository.findAll();
     }
 
 
-    public void addQuizResult(QuizResult quizResult){
-        Optional<QuizResult> quizResultOptional = quizResultRepository.getQuizResultById(quizResult.getId());
-        if (quizResultOptional.isPresent()){
+    public void addQuizResult(Quiz quiz){
+        Optional<Quiz> quizOptional = quizRepository.getQuizById(quiz.getId());
+        if (quizOptional.isPresent()){
             throw new IllegalStateException("Quiz Result with that id already exists.");
         }
-        quizResultRepository.save(quizResult);
-        System.out.println(quizResult);
+        quizRepository.save(quiz);
+        System.out.println(quiz);
     }
 
-    public void deleteQuizResult(Long quizResultId){
-        boolean existsById = quizResultRepository.existsById(quizResultId);
+    public void deleteQuizResult(Long quizId){
+        boolean existsById = quizRepository.existsById(quizId);
         if (!existsById) {
-            throw new IllegalStateException("Quiz Result ID " + quizResultId + " was not found");
+            throw new IllegalStateException("Quiz Result ID " + quizId + " was not found");
         } else {
-            quizResultRepository.deleteById(quizResultId);
+            quizRepository.deleteById(quizId);
         }
     }
 }
