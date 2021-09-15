@@ -1,29 +1,65 @@
 package com.budDy.budDy.User;
 
-import java.util.List;
+import javax.persistence.*;
 import java.util.Objects;
 
-public class User {
-    private String userName;
-    private String email;
-    private String password;
-    private UserExperience userExperience;
-    private int quizResultId;
+@Entity
+@Table
+class User {
+    @Id
+    @SequenceGenerator(
+            name = "user_sequence",
+            sequenceName = "user_sequence",
+            allocationSize = 1
+    )
 
-    public User(String userName, String email, String password, UserExperience userExperience, int quizResultId) {
-        this.userName = userName;
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "user_sequence"
+    )
+
+    Long id;
+    String username;
+    String email;
+    String password;
+    UserExperience userExperience;
+    int quizResultID; //foreign key
+
+    public User(){
+    }
+
+    public User(Long id, String username, String email, String password, UserExperience userExperience,
+                 int quizResultID) {
+        this.id = id;
+        this.username = username;
         this.email = email;
         this.password = password;
         this.userExperience = userExperience;
-        this.quizResultId = quizResultId;
+        this.quizResultID = quizResultID;
     }
 
-    public String getUserName() {
-        return userName;
+    public User(String username, String email, String password, UserExperience userExperience, int quizResultID) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.userExperience = userExperience;
+        this.quizResultID = quizResultID;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -50,12 +86,24 @@ public class User {
         this.userExperience = userExperience;
     }
 
-    public int getQuizResultId() {
-        return quizResultId;
+    public int getQuizResultID() {
+        return quizResultID;
     }
 
-    public void setQuizResultId(int quizResultId) {
-        this.quizResultId = quizResultId;
+    public void setQuizResultID(int quizResultID) {
+        this.quizResultID = quizResultID;
+    }
+
+    @Override
+    public String toString() {
+        return "PlantUser{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", userExperience=" + userExperience +
+                ", quizResultID=" + quizResultID +
+                '}';
     }
 
     @Override
@@ -63,22 +111,11 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return quizResultId == user.quizResultId && Objects.equals(userName, user.userName) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && userExperience == user.userExperience;
+        return quizResultID == user.quizResultID && Objects.equals(id, user.id) && Objects.equals(username, user.username) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && userExperience == user.userExperience;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName, email, password, userExperience, quizResultId);
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", userExperience=" + userExperience +
-                ", quizResultId=" + quizResultId +
-                '}';
+        return Objects.hash(id, username, email, password, userExperience, quizResultID);
     }
 }
