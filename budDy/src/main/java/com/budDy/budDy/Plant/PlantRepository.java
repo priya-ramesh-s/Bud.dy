@@ -18,11 +18,11 @@ public interface PlantRepository
 //    @Query("select p from Plant p where p.name = ?1")
     Optional<Plant> getPlantByName(String name);
 
-// <<<<<<< quizResultDb
+
 //   @Query("SELECT * FROM plant WHERE plantType = ?1 AND experience = ?2 ORDER BY rating DESC LIMIT 3")
 //     List<Plant> getTopThree(PlantType plantType, PlantExperience experience);
-// =======
+//
 // //write methods to sort and return list WHERE ....
-// >>>>>>> main 
+
 
 }

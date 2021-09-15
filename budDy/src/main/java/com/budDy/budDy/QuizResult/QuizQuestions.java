@@ -1,19 +1,19 @@
 package com.budDy.budDy.QuizResult;
 
-import com.budDy.budDy.Plant.Plant;
-import com.budDy.budDy.Plant.PlantExperience;
-import com.budDy.budDy.Plant.PlantService;
-import com.budDy.budDy.Plant.PlantType;
-import com.budDy.budDy.User.UserExperience;
-import com.budDy.budDy.User.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
-import java.util.Scanner;
-
-
-public class QuizQuestions {
+//import com.budDy.budDy.Plant.Plant;
+//import com.budDy.budDy.Plant.PlantExperience;
+//import com.budDy.budDy.Plant.PlantService;
+//import com.budDy.budDy.Plant.PlantType;
+//import com.budDy.budDy.User.UserExperience;
+//import com.budDy.budDy.User.UserService;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Component;
+//
+//import java.util.List;
+//import java.util.Scanner;
+//
+//
+//public class QuizQuestions {
 //    private PlantService plantService;
 //    private QuizService quizService;
 //    private UserService userService;
@@ -274,7 +274,7 @@ public class QuizQuestions {
 //        QuizResult newQuizResult = new QuizResult(effortResult, locationResult, suitablePlants);
 //        quizService.addQuizResult(newQuizResult);
     //}
-}
+//}
 
 
 

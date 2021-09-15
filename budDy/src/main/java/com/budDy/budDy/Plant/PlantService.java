@@ -42,9 +42,9 @@ public class PlantService {
        }
     }
 
-    public List<Plant> getTopThreePlants(PlantType plantType, PlantExperience experience){
-        return plantRepository.getTopThree(plantType, experience);
-    }
+//    public List<Plant> getTopThreePlants(PlantType plantType, PlantExperience experience){
+//        return plantRepository.getTopThree(plantType, experience);
+//    }
 
 
     public void updatePlant(Long plantId, Plant plant) {

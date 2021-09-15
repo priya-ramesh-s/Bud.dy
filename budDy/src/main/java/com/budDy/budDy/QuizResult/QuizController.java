@@ -24,6 +24,7 @@ public class QuizController {
     public void addQuizResult(@RequestBody QuizResult quizResult){
         quizService.addQuizResult(quizResult);
     }
+
     @DeleteMapping (path = "{quizResultId}")
     public void deleteQuizResult(@PathVariable("quizResultId") Long quizResultId){
         quizService.deleteQuizResult(quizResultId);
