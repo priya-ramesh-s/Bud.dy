@@ -15,100 +15,100 @@ public class PlantConfig {
             Plant fiddle_leaf_fig = new Plant(
                     "Fiddle Leaf Fig",
                     "Ficus lyrata",
-                    PlantType.INDOOR,
+                    "Indoor",
                     "Light watering",
                     "Bright light",
-                    PlantExperience.BEGINNER,
+                    "Beginner",
                     5
             );
             Plant anthurium = new Plant(
                     "Anthurium",
                     "Anthurium andraeanum",
-                    PlantType.INDOOR,
+                    "Indoor",
                     "Light watering",
                     "Medium light",
-                    PlantExperience.BEGINNER,
+                    "Beginner",
                     5
             );
             Plant kentia = new Plant(
                     "Kentia Palm",
                     "Howea forsteriana",
-                    PlantType.INDOOR,
+                    "Indoor",
                     "Light watering",
                     "Medium light",
-                    PlantExperience.INTERMEDIATE,
+                    "Intermediate",
                     5
             );
             Plant cacti = new Plant(
                     "Cactus",
                     "Cactus",
-                    PlantType.INDOOR,
+                    "Indoor",
                     "Light watering",
                     "Bright light",
-                    PlantExperience.BEGINNER,
+                    "Beginner",
                     5
             );
             Plant mahogany = new Plant(
                     "Mahogany Fern",
                     "Dryopteris erythrosora",
-                    PlantType.OUTDOOR,
+                    "Outdoor",
                     "Frequent watering",
                     "Shady spot",
-                    PlantExperience.INTERMEDIATE,
+                    "Intermediate",
                     5
             );
             Plant paradise = new Plant(
                     "Bird of Paradise",
                     "Strelitzia reginae",
-                    PlantType.INDOOR,
+                    "Indoor",
                     "Light watering",
                     "Bright Light",
-                    PlantExperience.INTERMEDIATE,
+                    "Intermediate",
                     5
             );
             Plant lemon = new Plant(
                     "Lemon Tree",
                     "Citrus limon",
-                    PlantType.OUTDOOR,
+                    "Outdoor",
                     "Regular Watering",
                     "Bright light",
-                    PlantExperience.INTERMEDIATE,
+                    "Intermediate",
                     5
             );
             Plant snake = new Plant(
                     "Snake Plant",
                     "Sansevieria trifasciata",
-                    PlantType.INDOOR,
+                    "Indoor",
                     "Light watering",
                     "Bright light",
-                    PlantExperience.BEGINNER,
+                    "Beginner",
                     5
             );
             Plant palm = new Plant(
                     "Meditteranean fan palm",
                     "Chamaerops humils",
-                    PlantType.OUTDOOR,
+                    "Outdoor",
                     "Light watering",
                     "Medium light",
-                    PlantExperience.INTERMEDIATE,
+                    "Intermediate",
                     5
             );
             Plant bay = new Plant(
                     "Bay tree",
                     "Laurus nobilis",
-                    PlantType.OUTDOOR,
+                    "Outdoor",
                     "Light watering",
                     "Direct sunlight",
-                    PlantExperience.BEGINNER,
+                    "Beginner",
                     5
             );
             Plant common_box = new Plant(
                     "Common Box",
                     "Buxus sempervirens",
-                    PlantType.OUTDOOR,
+                    "Outdoor",
                     "Regular watering",
                     "Shady spot",
-                    PlantExperience.INTERMEDIATE,
+                    "Intermediate",
                     5
             );
 

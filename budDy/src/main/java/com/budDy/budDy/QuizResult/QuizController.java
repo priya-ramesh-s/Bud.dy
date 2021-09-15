@@ -17,17 +17,17 @@ public class QuizController {
     }
 
     @GetMapping
-    public List<QuizResult> getQuizResults() {
+    public List<Quiz> getQuizResults() {
         return quizService.getQuizResults();
     }
     @PostMapping
-    public void addQuizResult(@RequestBody QuizResult quizResult){
+    public void addQuizResult(@RequestBody Quiz quizResult){
         quizService.addQuizResult(quizResult);
     }
 
-    @DeleteMapping (path = "{quizResultId}")
-    public void deleteQuizResult(@PathVariable("quizResultId") Long quizResultId){
-        quizService.deleteQuizResult(quizResultId);
+    @DeleteMapping (path = "{quizId}")
+    public void deleteQuizResult(@PathVariable("quizId") Long quizId){
+        quizService.deleteQuizResult(quizId);
     }
 
 }

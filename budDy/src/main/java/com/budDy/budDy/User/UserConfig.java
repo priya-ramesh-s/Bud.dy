@@ -16,7 +16,7 @@ public class UserConfig {
                     "hellokitty98",
                     "kitty@gmail.com",
                     "meow",
-                    UserExperience.BEGINNER,
+                    "Beginner",
                     1
             );
 

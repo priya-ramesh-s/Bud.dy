@@ -1,41 +1,38 @@
 package com.budDy.budDy.QuizResult;
 
-import com.budDy.budDy.Plant.Plant;
 import com.budDy.budDy.Plant.PlantExperience;
 import com.budDy.budDy.Plant.PlantType;
 import com.budDy.budDy.User.UserExperience;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Objects;
 @Entity
-@Table(name = "quizResult")
-public class QuizResult {
+@Table(name = "quiz")
+public class Quiz {
     @Id
     @SequenceGenerator(
-            name = "quizResult_sequence",
-            sequenceName = "quizResult_sequence",
+            name = "quiz_sequence",
+            sequenceName = "quiz_sequence",
             allocationSize = 1
     )
 
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "quizResult_sequence"
+            generator = "quiz_sequence"
     )
 
     Long id;
-    UserExperience userExperience;
-    PlantExperience plantExperience;
-    PlantType plantType;
-//    List<Plant> topThreePlants;
+    String userExperience;
+    String plantExperience;
+    String plantType;
     int plantId_1;
     int plantId_2;
     int plantId_3;
 
-    public QuizResult(){
+    public Quiz(){
     }
 
-    public QuizResult(Long id, UserExperience userExperience, PlantExperience plantExperience, PlantType plantType, int plantId_1, int plantId_2, int plantId_3) {
+    public Quiz(Long id, String userExperience, String plantExperience, String plantType, int plantId_1, int plantId_2, int plantId_3) {
         this.id = id;
         this.userExperience = userExperience;
         this.plantExperience = plantExperience;
@@ -45,7 +42,7 @@ public class QuizResult {
         this.plantId_3 = plantId_3;
     }
 
-    public QuizResult(UserExperience userExperience, PlantExperience plantExperience, PlantType plantType, int plantId_1, int plantId_2, int plantId_3) {
+    public Quiz(String userExperience, String plantExperience, String plantType, int plantId_1, int plantId_2, int plantId_3) {
         this.userExperience = userExperience;
         this.plantExperience = plantExperience;
         this.plantType = plantType;
@@ -62,27 +59,27 @@ public class QuizResult {
         this.id = id;
     }
 
-    public UserExperience getUserExperience() {
+    public String getUserExperience() {
         return userExperience;
     }
 
-    public void setUserExperience(UserExperience userExperience) {
+    public void setUserExperience(String userExperience) {
         this.userExperience = userExperience;
     }
 
-    public PlantExperience getPlantExperience() {
+    public String getPlantExperience() {
         return plantExperience;
     }
 
-    public void setPlantExperience(PlantExperience plantExperience) {
+    public void setPlantExperience(String plantExperience) {
         this.plantExperience = plantExperience;
     }
 
-    public PlantType getPlantType() {
+    public String getPlantType() {
         return plantType;
     }
 
-    public void setPlantType(PlantType plantType) {
+    public void setPlantType(String plantType) {
         this.plantType = plantType;
     }
 
@@ -114,8 +111,8 @@ public class QuizResult {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        QuizResult that = (QuizResult) o;
-        return plantId_1 == that.plantId_1 && plantId_2 == that.plantId_2 && plantId_3 == that.plantId_3 && Objects.equals(id, that.id) && userExperience == that.userExperience && plantExperience == that.plantExperience && plantType == that.plantType;
+        Quiz quiz = (Quiz) o;
+        return plantId_1 == quiz.plantId_1 && plantId_2 == quiz.plantId_2 && plantId_3 == quiz.plantId_3 && Objects.equals(id, quiz.id) && Objects.equals(userExperience, quiz.userExperience) && Objects.equals(plantExperience, quiz.plantExperience) && Objects.equals(plantType, quiz.plantType);
     }
 
     @Override
@@ -125,11 +122,11 @@ public class QuizResult {
 
     @Override
     public String toString() {
-        return "QuizResult{" +
+        return "Quiz{" +
                 "id=" + id +
-                ", userExperience=" + userExperience +
-                ", plantExperience=" + plantExperience +
-                ", plantType=" + plantType +
+                ", userExperience='" + userExperience + '\'' +
+                ", plantExperience='" + plantExperience + '\'' +
+                ", plantType='" + plantType + '\'' +
                 ", plantId_1=" + plantId_1 +
                 ", plantId_2=" + plantId_2 +
                 ", plantId_3=" + plantId_3 +
