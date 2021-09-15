@@ -19,9 +19,9 @@ public interface PlantRepository
     Optional<Plant> getPlantByName(String name);
 
 
-//   @Query("SELECT * FROM plant WHERE plantType = ?1 AND experience = ?2 ORDER BY rating DESC LIMIT 3")
-//     List<Plant> getTopThree(PlantType plantType, PlantExperience experience);
-//
+//   @Query("SELECT p FROM plant p WHERE p.plant_type = ?1 AND p.plant_experience = ?2 ORDER BY rating DESC LIMIT 3")
+//     List<Plant> getTopThreePlants(String plantType, String plantExperience);
+
 // //write methods to sort and return list WHERE ....
 
 

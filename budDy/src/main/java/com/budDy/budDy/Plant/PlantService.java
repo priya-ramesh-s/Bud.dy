@@ -1,5 +1,6 @@
 package com.budDy.budDy.Plant;
 
+import com.budDy.budDy.QuizResult.Quiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,6 +49,21 @@ public class PlantService {
 
 
     public void updatePlant(Long plantId, Plant plant) {
+        Plant updatePlant = plantRepository.getById(plantId);
+        boolean existsById = plantRepository.existsById(plantId);
+        if (!existsById){
+            throw new IllegalStateException("Plant cannot be updated as plant id does not exist!");
+        } else {
+            updatePlant.setName(plant.getName());
+            updatePlant.setLatinName(plant.getLatinName());
+            updatePlant.setPlantType(plant.getPlantType());
+            updatePlant.setPlantExperience(plant.getPlantExperience());
+            updatePlant.setLight(plant.getLight());
+            updatePlant.setWater(plant.getWater());
+            updatePlant.setRating(plant.getRating());
+            System.out.println(updatePlant);
+            plantRepository.save(updatePlant);
+        }
     }
 }
 
