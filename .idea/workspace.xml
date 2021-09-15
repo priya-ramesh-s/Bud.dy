@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a4b91c58-18d7-480e-b448-8354f34e3c95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/UserConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/User/UserConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizService.class" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1y8j302GMBUk8Q41rlswHlGqc3k" />
   <component name="ProjectViewState">

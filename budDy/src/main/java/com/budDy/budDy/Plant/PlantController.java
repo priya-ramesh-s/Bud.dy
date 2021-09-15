@@ -33,24 +33,8 @@ public class PlantController {
         plantService.deletePlant(plantId);
     }
 
-    @PutMapping
+    @PutMapping (path = "{plantId}")
     public void updatePlant(@PathVariable("plantId") Long plantId, @RequestBody Plant plant){
-        plantService.updatePlant (plantId, plant);
+        plantService.updatePlant(plantId, plant);
     }
-
-//    @PutMapping
-//    public void updatePlant(@PathVariable("plantName") String plantName){
-//        plantService.updatePlant(plantName);
-//    }
-
-//     localhost:8080/bud-dy/plants/Spearmint
-//    @DeleteMapping("{plantName}")
-//    public void deletePlant(@PathVariable("plantName") String plantName) {
-//        plantService.deletePlant(plantName);
-//    }
-//
-//    @PutMapping
-//    public void updatePlant(@PathVariable("plantName") String plantName, @RequestBody Plant plant) {
-//        plantService.updatePlant(plantName, plant);
-//    }
 }
