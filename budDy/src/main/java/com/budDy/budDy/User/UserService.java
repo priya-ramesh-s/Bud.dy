@@ -40,8 +40,12 @@ public class UserService {
         }
     }
 
-    public void updateUser(Long userId, User user) {
-    }
+// <<<<<<< quizResultDb
+//     // need to create method to search for a new user
+// =======
+//     public void updateUser(Long userId, User user) {
+//     }
+// >>>>>>> main
 }
 
 
