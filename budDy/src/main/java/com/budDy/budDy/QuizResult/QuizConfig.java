@@ -18,7 +18,9 @@ public class QuizConfig {
                     UserExperience.BEGINNER,
                     PlantExperience.BEGINNER,
                     PlantType.INDOOR,
-                    List.of()
+                    1,
+                    2,
+                    3
             );
             repository.saveAll(
                     List.of(quizResult1)
