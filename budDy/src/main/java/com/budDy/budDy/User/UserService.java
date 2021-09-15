@@ -34,4 +34,6 @@ public class UserService {
             throw new IllegalStateException(userName + " was not found so cannot be removed.");
         }
     }
+
+    // need to create method to search for a new user
 }
