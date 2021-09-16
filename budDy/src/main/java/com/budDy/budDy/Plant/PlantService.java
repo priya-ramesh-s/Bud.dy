@@ -24,13 +24,26 @@ public class PlantService {
     }
 
     //adds new plant to db
-    public void addPlant(Plant plant) {
+    public Plant addPlant(Plant plant) {
+        if(plant == null){
+            throw new IllegalArgumentException("Plant cannot be null!");
+        }
+        if (plant.getName() == null ||
+                plant.getLatinName() == null ||
+                plant.getPlantType() == null ||
+                plant.getWater() == null ||
+                plant.getLight() == null ||
+                plant.getPlantExperience() == null ||
+                plant.getRating() == 0) {
+            throw new IllegalStateException("Plant cannot have empty fields.");
+        }
         Optional<Plant> plantOptional = plantRepository.getPlantByName(plant.getName());
         if (plantOptional.isPresent()){
             throw new IllegalStateException("plant already exists");
         }
-        plantRepository.save(plant);
         System.out.println(plant);
+        return plantRepository.save(plant);
+
     }
 
 

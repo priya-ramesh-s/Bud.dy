@@ -25,14 +25,14 @@ public class Quiz {
     String userExperience;
     String plantExperience;
     String plantType;
-    int plantId_1;
-    int plantId_2;
-    int plantId_3;
+    Long plantId_1;
+    Long plantId_2;
+    Long plantId_3;
 
     public Quiz(){
     }
 
-    public Quiz(Long id, String userExperience, String plantExperience, String plantType, int plantId_1, int plantId_2, int plantId_3) {
+    public Quiz(Long id, String userExperience, String plantExperience, String plantType, Long plantId_1, Long plantId_2, Long plantId_3) {
         this.id = id;
         this.userExperience = userExperience;
         this.plantExperience = plantExperience;
@@ -42,7 +42,7 @@ public class Quiz {
         this.plantId_3 = plantId_3;
     }
 
-    public Quiz(String userExperience, String plantExperience, String plantType, int plantId_1, int plantId_2, int plantId_3) {
+    public Quiz(String userExperience, String plantExperience, String plantType, Long plantId_1, Long plantId_2, Long plantId_3) {
         this.userExperience = userExperience;
         this.plantExperience = plantExperience;
         this.plantType = plantType;
@@ -83,27 +83,27 @@ public class Quiz {
         this.plantType = plantType;
     }
 
-    public int getPlantId_1() {
+    public Long getPlantId_1() {
         return plantId_1;
     }
 
-    public void setPlantId_1(int plantId_1) {
+    public void setPlantId_1(Long plantId_1) {
         this.plantId_1 = plantId_1;
     }
 
-    public int getPlantId_2() {
+    public Long getPlantId_2() {
         return plantId_2;
     }
 
-    public void setPlantId_2(int plantId_2) {
+    public void setPlantId_2(Long plantId_2) {
         this.plantId_2 = plantId_2;
     }
 
-    public int getPlantId_3() {
+    public Long getPlantId_3() {
         return plantId_3;
     }
 
-    public void setPlantId_3(int plantId_3) {
+    public void setPlantId_3(Long plantId_3) {
         this.plantId_3 = plantId_3;
     }
 
@@ -112,7 +112,7 @@ public class Quiz {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Quiz quiz = (Quiz) o;
-        return plantId_1 == quiz.plantId_1 && plantId_2 == quiz.plantId_2 && plantId_3 == quiz.plantId_3 && Objects.equals(id, quiz.id) && Objects.equals(userExperience, quiz.userExperience) && Objects.equals(plantExperience, quiz.plantExperience) && Objects.equals(plantType, quiz.plantType);
+        return Objects.equals(id, quiz.id) && Objects.equals(userExperience, quiz.userExperience) && Objects.equals(plantExperience, quiz.plantExperience) && Objects.equals(plantType, quiz.plantType) && Objects.equals(plantId_1, quiz.plantId_1) && Objects.equals(plantId_2, quiz.plantId_2) && Objects.equals(plantId_3, quiz.plantId_3);
     }
 
     @Override
