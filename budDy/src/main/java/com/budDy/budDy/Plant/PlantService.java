@@ -42,6 +42,7 @@ public class PlantService {
             throw new IllegalStateException("plant already exists");
         }
         System.out.println(plant);
+
         return plantRepository.save(plant);
 
     }
@@ -55,10 +56,6 @@ public class PlantService {
            plantRepository.deleteById(plantId);
        }
     }
-
-//    public List<Plant> getTopThreePlants(PlantType plantType, PlantExperience experience){
-//        return plantRepository.getTopThree(plantType, experience);
-//    }
 
 
     public void updatePlant(Long plantId, Plant plant) {

@@ -8,6 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -44,21 +45,21 @@ public class PlantServiceTest {
         assertThat(expectedPlant).isEqualTo(plant);
         assertThat(result).isEqualTo(plant);
     }
-//    @Test
-//    void cannotAddPlantThatAlreadyExists() {
-//        Plant plant = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
-//
-//        Mockito.when(plantRepository.findAll()).thenReturn(List.of(
-//                new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2),
-//                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
-//                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
-//        ));
-//        assertThatThrownBy(() -> {
-//            underTest.addPlant(plant);
-//        }).isInstanceOf(IllegalStateException.class)
-//                .hasMessage("Plant with name " + plant.getName() + " already exists.");
-//        Mockito.verify(plantRepository, Mockito.never()).save(plant);
-//    }
+
+    @Test
+    void cannotAddPlantThatAlreadyExists() {
+        Plant plant = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
+        Plant plant1 = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
+        Optional<Plant> plant2 = Optional.of(plant1);
+
+        Mockito.when(plantRepository.getPlantByName(plant.getName())).thenReturn(Optional.of(plant1));
+        assertThatThrownBy(() -> {
+            underTest.addPlant(plant);
+        }).isInstanceOf(IllegalStateException.class)
+                .hasMessage("plant already exists");
+        Mockito.verify(plantRepository, Mockito.never()).save(plant);
+    }
+
     @Test
     void shouldThrowWhenPlantNameIsNull() {
         Plant plant = new Plant(null, "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
@@ -136,59 +137,64 @@ public class PlantServiceTest {
                 .hasMessage("Plant cannot be null!");
         Mockito.verifyNoInteractions(plantRepository);
     }
-//
+
 //    @Test
 //    void canDeletePlantWhenPlantExists() {
 //        Plant plant = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
-//        Mockito.when(plantDataAccessService.listAllPlants()).thenReturn(List.of(
-//                new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2),
-//                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
-//                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
-//        ));
-//        Mockito.when(plantDataAccessService.removePlant(plant)).thenReturn(true);
+//        plant.setId(1L);
+//        Mockito.when(plantRepository.existsById(plant.getId())).thenReturn(true);
+//        Mockito.verify(plantRepository).deleteById(plant.getId());
+//        underTest.deletePlant(plant.getId());
 //
-//        boolean result = underTest.deletePlant(plant.getName());
-//        assertThat(result).isEqualTo(true);
+////        boolean result = underTest.deletePlant(plant.getName());
+////        assertThat(result).isEqualTo(true);
 //    }
-//
-//    @Test
-//    void cannotDeletePlantWhenPlantDoesNotExist(){
-//        Plant plant = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
-//        String plantName = plant.getName();
-//        Mockito.when(plantDataAccessService.listAllPlants()).thenReturn(List.of(
-//                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
-//                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
-//        ));
-//        assertThatThrownBy(() -> {
-//            underTest.deletePlant(plantName);
-//        }).isInstanceOf(IllegalStateException.class)
-//                .hasMessage(plantName + " was not found so cannot be removed.");
-//        Mockito.verify(plantDataAccessService, Mockito.never()).removePlant(plant);
-//
+
+//    public void whenGivenId_shouldDeleteUser_ifFound(){
+//        User user = new User();
+//        user.setName(“Test Name”);
+//        user.setId(1L);
+//        when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
+//        deleteUserService.deleteUser(user.getId());
+//        verify(userRepository).deleteById(user.getId());
 //    }
-//    //    @Test
-////    void cannotUpdatePlantWhenPlantDoesNotExist(){
-////        Plant plant = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
-////        String plantName = plant.getName();
-////        Mockito.when(plantDataAccessService.listAllPlants()).thenReturn(List.of(
-////                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
-////                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
-////        ));
-////        assertThatThrownBy(() -> {
-////            underTest.updatePlant(plantName, plant);
-////        }).isInstanceOf(IllegalStateException.class)
-////                .hasMessage(plantName + " was not found so cannot be removed.");
-////        Mockito.verify(plantDataAccessService, Mockito.never()).updatePlant;
-////
-////    }
-//    @Test
-//    void canGetListFromPlantDatabase(){
-//        Mockito.when(plantDataAccessService.listAllPlants()).thenReturn(List.of(
-//                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
-//                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
-//        ));
-//        List<Plant> allPlants = underTest.getPlants();
-//        assertThat(allPlants).isEqualTo(plantDataAccessService.listAllPlants());
-//    }
-//
+
+    @Test
+    void cannotDeletePlantWhenPlantDoesNotExist(){
+        Plant plant = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
+        Long plantId = plant.getId();
+        Mockito.when(plantRepository.findAll()).thenReturn(List.of(
+                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
+                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
+        ));
+        assertThatThrownBy(() -> {
+            underTest.deletePlant(plantId);
+        }).isInstanceOf(IllegalStateException.class)
+                .hasMessage("plant ID" + plantId + "was not found");
+        Mockito.verify(plantRepository, Mockito.never()).delete(plant);
+    }
+        @Test
+    void cannotUpdatePlantWhenPlantDoesNotExist(){
+        Plant plant = new Plant("Rubber Plant", "Ficus elastica", "Indoor", "Light", "Dark", "Intermediate", 2);
+        Long plantId = plant.getId();
+        Mockito.when(plantRepository.findAll()).thenReturn(List.of(
+                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
+                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
+        ));
+        assertThatThrownBy(() -> {
+            underTest.updatePlant(plantId, plant);
+        }).isInstanceOf(IllegalStateException.class)
+                .hasMessage("Plant cannot be updated as plant id does not exist!");
+        Mockito.verify(plantRepository, Mockito.never()).save(plant);
+
+    }
+    @Test
+    void canGetListFromPlantDatabase(){
+        Mockito.when(plantRepository.findAll()).thenReturn(List.of(
+                new Plant("Aloe Vera", "A.vera", "indoor", "medium", "medium", "intermediate", 5),
+                new Plant("Spearmint", "Mentha spicata", "outdoor", "medium", "medium", "intermediate", 5)
+        ));
+        List<Plant> allPlants = underTest.getPlants();
+        assertThat(allPlants).isEqualTo(plantRepository.findAll());
+    }
 }
