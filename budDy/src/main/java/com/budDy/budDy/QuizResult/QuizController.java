@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "buddy/quizResults")
@@ -44,11 +45,16 @@ public class QuizController {
     public void updateQuizUserExperience(@PathVariable("quizId") Long quizId, @RequestBody Quiz quiz){
         quizService.updateQuizUserExperience(quizId, quiz);
     }
-    //Give a list of top three plants accordingly
-//    @GetMapping(path = "getTopThree/{quizId}")
-//    public void getTopThreePlants(@PathVariable("quizId") Long quizId){
-//        quizService.getTopThreePlants(quizId);
-//    }
+//    Give a list of top three plants accordingly and saves them so the user can view them in future
+    @GetMapping(path = "getTopThree/{quizId}")
+    public List<Plant> getTopThreePlants(@PathVariable("quizId") Long quizId){
+        return quizService.getTopThreePlants(quizId);
+    }
+
+    @GetMapping(path = "showSavedTopThree/{quizId}")
+    public List<Optional<Plant>> showSavedTopThree(@PathVariable("quizId") Long quizId){
+        return quizService.getSavedTopThreePlants(quizId);
+    }
 
     @DeleteMapping (path = "{quizId}")
     public void deleteQuizResult(@PathVariable("quizId") Long quizId){

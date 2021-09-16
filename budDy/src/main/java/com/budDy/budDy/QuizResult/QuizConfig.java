@@ -15,9 +15,9 @@ public class QuizConfig {
                     "Beginner",
                     "Beginner",
                     "Indoor",
-                    1,
-                    2,
-                    3
+                    1L,
+                    2L,
+                    3L
             );
             repository.saveAll(
                     List.of(quiz1)

@@ -23,19 +23,39 @@ public class QuizService {
         return quizRepository.findAll();
     }
 
-//    public List<Plant> getTopThreePlants(Long quizId){
-//        Quiz quizToFind = quizRepository.getById(quizId);
-//        boolean existsById = quizRepository.existsById(quizId);
-//        if (!existsById) {
-//            throw new IllegalStateException("Quiz result cannot be updated as id does not exist!");
-//        } else {
-//            String plantType = quizToFind.getPlantType();
-//            String plantExperience = quizToFind.getPlantExperience();
-//            String userExperience = quizToFind.getUserExperience();
-//            System.out.println(quizToFind);
-//            return plantRepository.getTopThreePlants(plantType, plantExperience);
-//        }
-//    }
+    public List<Plant> getTopThreePlants(Long quizId){
+        Quiz quizToFind = quizRepository.getById(quizId);
+        boolean existsById = quizRepository.existsById(quizId);
+        if (!existsById) {
+            throw new IllegalStateException("Quiz result cannot be updated as id does not exist!");
+        } else {
+            String plantType = quizToFind.getPlantType();
+            String plantExperience = quizToFind.getPlantExperience();
+            List<Plant> topThree =  plantRepository.getTopThreePlants(plantType, plantExperience).get();
+            Long id_1 = topThree.get(0).getId();
+            quizToFind.setPlantId_1(id_1);
+            Long id_2 = topThree.get(1).getId();
+            quizToFind.setPlantId_2(id_2);
+            Long id_3 = topThree.get(2).getId();
+            quizToFind.setPlantId_3(id_3);
+            quizRepository.save(quizToFind);
+            return topThree;
+        }
+    }
+
+    public List<Optional<Plant>> getSavedTopThreePlants(Long quizId){
+        Quiz quizToFind = quizRepository.getById(quizId);
+        boolean existsById = quizRepository.existsById(quizId);
+        if (!existsById) {
+            throw new IllegalStateException("Cannot get plants as quiz id does not exist!");
+        } else {
+            Optional<Plant> plant1 = plantRepository.getSavedTopOne(quizId);
+            Optional<Plant> plant2 = plantRepository.getSavedTopTwo(quizId);
+            Optional<Plant> plant3 = plantRepository.getSavedTopThree(quizId);
+            List<Optional<Plant>> savedPlantsToId = List.of(plant1, plant2, plant3);
+            return savedPlantsToId;
+        }
+    }
 
     // need a method to save plants to the database
 

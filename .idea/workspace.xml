@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a4b91c58-18d7-480e-b448-8354f34e3c95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/QuizResult/QuizService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/Quiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizService.class" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/target/classes/com/budDy/budDy/QuizResult/QuizService.class" afterDir="false" />
     </list>
@@ -23,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,15 +66,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuizQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.budDy.budDy.QuizResult.QuizQuestions" />
+    <configuration name="PlantServiceTest.shouldThrowWhenPlantIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="budDy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.budDy.budDy.QuizResult.*" />
+          <option name="PATTERN" value="com.budDy.budDy.Plant.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.budDy.budDy.Plant" />
+      <option name="MAIN_CLASS_NAME" value="com.budDy.budDy.Plant.PlantServiceTest" />
+      <option name="METHOD_NAME" value="shouldThrowWhenPlantIsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlantServiceTest.shouldThrowWhenPlantLatinNameIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="budDy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.budDy.budDy.Plant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.budDy.budDy.Plant" />
+      <option name="MAIN_CLASS_NAME" value="com.budDy.budDy.Plant.PlantServiceTest" />
+      <option name="METHOD_NAME" value="shouldThrowWhenPlantLatinNameIsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlantServiceTest.shouldThrowWhenPlantNameIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="budDy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.budDy.budDy.Plant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.budDy.budDy.Plant" />
+      <option name="MAIN_CLASS_NAME" value="com.budDy.budDy.Plant.PlantServiceTest" />
+      <option name="METHOD_NAME" value="shouldThrowWhenPlantNameIsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlantServiceTest.shouldThrowWhenRatingIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="budDy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.budDy.budDy.Plant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.budDy.budDy.Plant" />
+      <option name="MAIN_CLASS_NAME" value="com.budDy.budDy.Plant.PlantServiceTest" />
+      <option name="METHOD_NAME" value="shouldThrowWhenRatingIsZero" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -80,7 +133,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BudDyApplication" />
-        <item itemvalue="Application.QuizQuestions" />
+        <item itemvalue="JUnit.PlantServiceTest.shouldThrowWhenPlantIsNull" />
+        <item itemvalue="JUnit.PlantServiceTest.shouldThrowWhenPlantLatinNameIsNull" />
+        <item itemvalue="JUnit.PlantServiceTest.shouldThrowWhenPlantNameIsNull" />
+        <item itemvalue="JUnit.PlantServiceTest.shouldThrowWhenRatingIsZero" />
       </list>
     </recent_temporary>
   </component>
@@ -106,5 +162,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Bud_dy$BudDyApplication.ic" NAME="BudDyApplication Coverage Results" MODIFIED="1631781557957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.budDy.budDy.*</FILTER>
+    </SUITE>
   </component>
 </project>
