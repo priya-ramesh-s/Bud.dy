@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4b91c58-18d7-480e-b448-8354f34e3c95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/main/java/com/budDy/budDy/Plant/PlantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budDy/src/test/java/com/budDy/budDy/Plant/PlantServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/src/test/java/com/budDy/budDy/Plant/PlantServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/budDy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/budDy/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="JUnit.PlantServiceTest.canDeletePlantWhenPlantExists">
@@ -145,6 +144,9 @@
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -158,11 +160,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Bud_dy$PlantServiceTest.ic" NAME="PlantServiceTest Coverage Results" MODIFIED="1631795099687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.budDy.budDy.Plant.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Bud_dy$BudDyApplication.ic" NAME="BudDyApplication Coverage Results" MODIFIED="1631781557957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.budDy.budDy.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Bud_dy$PlantServiceTest.ic" NAME="PlantServiceTest Coverage Results" MODIFIED="1631795099687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.budDy.budDy.Plant.*</FILTER>
     </SUITE>
   </component>
 </project>
